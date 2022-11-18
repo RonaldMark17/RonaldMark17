@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
+*{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     font-family: 'Cabin', sans-serif;
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
-    background: url();
 }
+
 *::selection{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -26,20 +26,27 @@
     --p-font: 1.1rem;
 }
 
-body {
-    background: var(--bg-color);
-    color: var(--text-color);
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
-    background: url(./bg1.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: grid;
-    color: var(--text-color);
+body{
+    background-color: whitesmoke;
+    background-image: linear-gradient(315deg, whitesmoke 0%, white 100%);
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+        min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        background: url(../images/bg1.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: grid;
+        color: var(--text-color);
+    
 }
-
 header {
     position: fixed;
     width: 100%;
@@ -49,9 +56,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(100%, 100%, 100%, 0%);
+    background-color: rgba(235, 169, 157, 0.938);
     backdrop-filter: blur(50px);
-    padding: 30px 18%;
+    padding: 0px 18%;
     transition: .3s;
 }
 
@@ -104,101 +111,50 @@ section {
     padding: 100px 18%;
 }
 
-.heading {
+.quiz-container{
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    width: 600px;
+    overflow: hidden;
+}
+.quiz-header{
+    padding: 4rem;
+}
+h2{
+    padding: 1rem;
     text-align: center;
+    margin: 0;
 }
-
-.heading h2 {
-    font-size: var(--h2-font);
-    font-weight: 500;
-    margin: 7px 0px 20px;
-    line-height: 1.1;
+ul{
+    list-style: none;
+    padding: 0;
 }
-
-.heading h3 {
-    color: var(--main-color);
-    font-size: 20px;
-    font-weight: 500;
+ul li{
+    font-size: 1.2rem;
+    margin: 1rem 0;
 }
-
-.heading p {
-    font-size: var(--p-font);
-    color: var(--text-color);
-    line-height: 28px;
-}
-
-
-.portfolio-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    grid-gap: 2rem;
-    align-items: center;
-    margin-top: 5rem;
-    text-align: center;
+ul li label{
     cursor: pointer;
 }
-
-.col {
-    position: relative;
-}
-
-.col img {
-    max-width: 100%;
-    width: 550px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.layer {
-    background: transparent;
-    height: 100%;
+button{
+    background-color: rgb(51, 180, 180);
+    color:#fff;
+    border:none;
+    display: block;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 12px;
-    transition: all .40s;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: inherit;
+    padding: 1.3rem;
 }
-
-.layer:hover {
-    background: linear-gradient(rgba(0, 0, 0, 0.5)0%, #191919);
-}
-
-.layer h3 {
-    position: absolute;
-    width: 100%;
-    font-size: 25px;
-    font-weight: 500;
-    color: var(--bg-color);
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: all .40s;
-}
-
-.layer:hover h3 {
-    bottom: 52%;
-    opacity: 1;
-}
-
-.layer h5 {
-    position: absolute;
-    width: 100%;
-    font-size: 17px;
-    font-weight: 500;
-    color: var(--bg-color);
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: all .40s;
-}
-
-.layer:hover h5 {
-    bottom: 48%;
-    opacity: 1;
+button:hover{
+    background-color: rgb(26, 104, 104);
+    
+}   
+button:focus{
+    outline: none;
+    background-color: rgb(30, 136, 30);
 }
 @media (max-width: 1425px) {
     header {
@@ -240,7 +196,7 @@ section {
 
     .navlist {
         position: absolute;
-        top: -600px;
+        top: -690px;
         left: 0;
         right: 0;
         flex-direction: column;
